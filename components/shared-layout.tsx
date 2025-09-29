@@ -53,7 +53,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 href="/"
                 className={`text-sm font-medium transition-colors ${
                   pathname === "/"
-                    ? "text-primary font-semibold" // Active page styling
+                    ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold" // Active page now looks like a small button
                     : "text-foreground hover:text-primary"
                 }`}
               >
@@ -63,7 +63,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 href="/about"
                 className={`text-sm font-medium transition-colors ${
                   pathname === "/about"
-                    ? "text-primary font-semibold" // Active page styling
+                    ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold" // Active page button styling
                     : "text-foreground hover:text-primary"
                 }`}
               >
@@ -73,7 +73,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 href="/privacy"
                 className={`text-sm font-medium transition-colors ${
                   pathname === "/privacy"
-                    ? "text-primary font-semibold" // Active page styling
+                    ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold" // Active page button styling
                     : "text-foreground hover:text-primary"
                 }`}
               >
@@ -83,7 +83,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 href="/terms"
                 className={`text-sm font-medium transition-colors ${
                   pathname === "/terms"
-                    ? "text-primary font-semibold" // Active page styling
+                    ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold" // Active page button styling
                     : "text-foreground hover:text-primary"
                 }`}
               >
@@ -93,7 +93,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 href="/refund"
                 className={`text-sm font-medium transition-colors ${
                   pathname === "/refund"
-                    ? "text-primary font-semibold" // Active page styling
+                    ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold" // Active page button styling
                     : "text-foreground hover:text-primary"
                 }`}
               >
@@ -120,7 +120,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                   href="/"
                   className={`text-left text-sm font-medium transition-colors ${
                     pathname === "/"
-                      ? "text-primary font-semibold" // Active page styling for mobile
+                      ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold inline-block w-fit" // Active page button styling for mobile
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -130,7 +130,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                   href="/about"
                   className={`text-left text-sm font-medium transition-colors ${
                     pathname === "/about"
-                      ? "text-primary font-semibold" // Active page styling for mobile
+                      ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold inline-block w-fit" // Active page button styling for mobile
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -140,7 +140,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                   href="/privacy"
                   className={`text-left text-sm font-medium transition-colors ${
                     pathname === "/privacy"
-                      ? "text-primary font-semibold" // Active page styling for mobile
+                      ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold inline-block w-fit" // Active page button styling for mobile
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -150,7 +150,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                   href="/terms"
                   className={`text-left text-sm font-medium transition-colors ${
                     pathname === "/terms"
-                      ? "text-primary font-semibold" // Active page styling for mobile
+                      ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold inline-block w-fit" // Active page button styling for mobile
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -160,7 +160,7 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                   href="/refund"
                   className={`text-left text-sm font-medium transition-colors ${
                     pathname === "/refund"
-                      ? "text-primary font-semibold" // Active page styling for mobile
+                      ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold inline-block w-fit" // Active page button styling for mobile
                       : "text-foreground hover:text-primary"
                   }`}
                 >

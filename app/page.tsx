@@ -117,7 +117,7 @@ export default function HomePage() {
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
                     pathname === item.href
-                      ? "text-primary font-semibold" // Active page styling
+                      ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold" // Active page now looks like a small button
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -153,7 +153,7 @@ export default function HomePage() {
                     href={item.href}
                     className={`text-left text-sm font-medium transition-colors ${
                       pathname === item.href
-                        ? "text-primary font-semibold" // Active page styling for mobile
+                        ? "bg-primary text-primary-foreground px-3 py-1.5 rounded-full font-semibold inline-block w-fit" // Active page button styling for mobile
                         : "text-foreground hover:text-primary"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
