@@ -52,50 +52,20 @@ export function SharedLayout({ children }: SharedLayoutProps) {
               <Link href="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
                 Home
               </Link>
-              <button
-                onClick={() => scrollToSection("sports")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                Sports
-              </button>
-              <button
-                onClick={() => scrollToSection("what-you-can-do")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                What You Can Do
-              </button>
-              <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                How It Works
-              </button>
-              <button
-                onClick={() => scrollToSection("features")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                Features
-              </button>
-              <button
-                onClick={() => scrollToSection("players-owners")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                Players & Owners
-              </button>
-              <button
-                onClick={() => scrollToSection("cities")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                Cities
-              </button>
-              <button
-                onClick={() => scrollToSection("faq")}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                FAQ
-              </button>
               <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
                 About
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                Privacy
+              </Link>
+              <Link href="/terms" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                Terms
+              </Link>
+              <Link href="/refund" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                Refund Policy
               </Link>
               <WaitlistModal>
                 <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -125,53 +95,29 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 >
                   Home
                 </Link>
-                <button
-                  onClick={() => scrollToSection("sports")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  Sports
-                </button>
-                <button
-                  onClick={() => scrollToSection("what-you-can-do")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  What You Can Do
-                </button>
-                <button
-                  onClick={() => scrollToSection("how-it-works")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  How It Works
-                </button>
-                <button
-                  onClick={() => scrollToSection("features")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  Features
-                </button>
-                <button
-                  onClick={() => scrollToSection("players-owners")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  Players & Owners
-                </button>
-                <button
-                  onClick={() => scrollToSection("cities")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  Cities
-                </button>
-                <button
-                  onClick={() => scrollToSection("faq")}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  FAQ
-                </button>
                 <Link
                   href="/about"
                   className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
                 >
                   About
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  Privacy
+                </Link>
+                <Link
+                  href="/terms"
+                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  Terms
+                </Link>
+                <Link
+                  href="/refund"
+                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  Refund Policy
                 </Link>
                 <WaitlistModal>
                   <Button size="sm" className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground">
