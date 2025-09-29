@@ -4,6 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation" // Added usePathname hook for active page detection
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -35,6 +36,7 @@ import {
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname() // Added pathname detection for active page highlighting
   const [joinFormData, setJoinFormData] = useState({
     name: "",
     email: "",
@@ -113,7 +115,11 @@ export default function HomePage() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-sm font-medium transition-colors ${
+                    pathname === item.href
+                      ? "text-primary font-semibold" // Active page styling
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -145,7 +151,11 @@ export default function HomePage() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                    className={`text-left text-sm font-medium transition-colors ${
+                      pathname === item.href
+                        ? "text-primary font-semibold" // Active page styling for mobile
+                        : "text-foreground hover:text-primary"
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}

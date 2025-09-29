@@ -4,6 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation" // Added usePathname hook for active page detection
 import { Menu, X, Mail, Instagram, Twitter, Linkedin } from "lucide-react"
 
 interface SharedLayoutProps {
@@ -12,6 +13,7 @@ interface SharedLayoutProps {
 
 export function SharedLayout({ children }: SharedLayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname() // Added pathname detection for active page highlighting
 
   const scrollToSection = (sectionId: string) => {
     // For internal pages, navigate to home page with hash
@@ -47,22 +49,54 @@ export function SharedLayout({ children }: SharedLayoutProps) {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <Link
+                href="/"
+                className={`text-sm font-medium transition-colors ${
+                  pathname === "/"
+                    ? "text-primary font-semibold" // Active page styling
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
                 Home
               </Link>
-              <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <Link
+                href="/about"
+                className={`text-sm font-medium transition-colors ${
+                  pathname === "/about"
+                    ? "text-primary font-semibold" // Active page styling
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
                 About
               </Link>
               <Link
                 href="/privacy"
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  pathname === "/privacy"
+                    ? "text-primary font-semibold" // Active page styling
+                    : "text-foreground hover:text-primary"
+                }`}
               >
                 Privacy
               </Link>
-              <Link href="/terms" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <Link
+                href="/terms"
+                className={`text-sm font-medium transition-colors ${
+                  pathname === "/terms"
+                    ? "text-primary font-semibold" // Active page styling
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
                 Terms
               </Link>
-              <Link href="/refund" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <Link
+                href="/refund"
+                className={`text-sm font-medium transition-colors ${
+                  pathname === "/refund"
+                    ? "text-primary font-semibold" // Active page styling
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
                 Refund Policy
               </Link>
             </div>
@@ -84,31 +118,51 @@ export function SharedLayout({ children }: SharedLayoutProps) {
               <div className="flex flex-col space-y-4">
                 <Link
                   href="/"
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-left text-sm font-medium transition-colors ${
+                    pathname === "/"
+                      ? "text-primary font-semibold" // Active page styling for mobile
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-left text-sm font-medium transition-colors ${
+                    pathname === "/about"
+                      ? "text-primary font-semibold" // Active page styling for mobile
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   About
                 </Link>
                 <Link
                   href="/privacy"
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-left text-sm font-medium transition-colors ${
+                    pathname === "/privacy"
+                      ? "text-primary font-semibold" // Active page styling for mobile
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   Privacy
                 </Link>
                 <Link
                   href="/terms"
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-left text-sm font-medium transition-colors ${
+                    pathname === "/terms"
+                      ? "text-primary font-semibold" // Active page styling for mobile
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   Terms
                 </Link>
                 <Link
                   href="/refund"
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className={`text-left text-sm font-medium transition-colors ${
+                    pathname === "/refund"
+                      ? "text-primary font-semibold" // Active page styling for mobile
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   Refund Policy
                 </Link>
