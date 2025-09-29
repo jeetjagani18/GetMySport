@@ -1,37 +1,11 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, RefreshCw, Clock, CreditCard, AlertCircle } from "lucide-react"
+import { RefreshCw, Clock, CreditCard, AlertCircle } from "lucide-react"
+import { SharedLayout } from "@/components/shared-layout"
 
 export default function RefundPolicyPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/images/getmysport-logo.png"
-                alt="Get My Sport"
-                width={40}
-                height={40}
-                className="h-10 w-10"
-              />
-              <span className="text-xl font-bold">Get My Sport</span>
-            </Link>
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              <span>Back to Home</span>
-            </Link>
-          </div>
-        </div>
-      </header>
-
+    <SharedLayout>
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
@@ -291,30 +265,7 @@ export default function RefundPolicyPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2">
-              <Image src="/images/getmysport-logo.png" alt="Get My Sport" width={32} height={32} className="h-8 w-8" />
-              <span className="font-semibold">Get My Sport</span>
-            </div>
-            <div className="flex space-x-6 text-sm text-muted-foreground">
-              <Link href="/about" className="hover:text-foreground transition-colors">
-                About Us
-              </Link>
-              <Link href="/privacy" className="hover:text-foreground transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-foreground transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </SharedLayout>
   )
 }
