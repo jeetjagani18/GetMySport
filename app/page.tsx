@@ -122,6 +122,9 @@ export default function HomePage() {
                   {item.label}
                 </button>
               ))}
+              <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                About
+              </Link>
               <WaitlistModal>
                 <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Join
@@ -162,6 +165,12 @@ export default function HomePage() {
                     {item.label}
                   </button>
                 ))}
+                <Link
+                  href="/about"
+                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  About
+                </Link>
                 <WaitlistModal>
                   <Button size="sm" className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground">
                     Join
@@ -642,10 +651,11 @@ export default function HomePage() {
               <h4 className="font-heading font-bold text-lg">Links</h4>
               <div className="space-y-3 text-background/80">
                 {[
-                  { label: "About", href: "#" },
-                  { label: "Partner With Us", href: "#" },
-                  { label: "Privacy", href: "#" },
-                  { label: "Terms", href: "#" },
+                  { label: "About", href: "/about" },
+                  { label: "Partner With Us", href: "#players-owners" },
+                  { label: "Privacy", href: "/privacy" },
+                  { label: "Terms", href: "/terms" },
+                  { label: "Refund Policy", href: "/refund" },
                 ].map((link) => (
                   <div key={link.label}>
                     <Link href={link.href} className="hover:text-primary transition-colors">
