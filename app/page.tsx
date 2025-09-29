@@ -97,9 +97,9 @@ export default function HomePage() {
               <Image
                 src="/images/getmysport-logo-icon.png"
                 alt="Get My Sport"
-                width={40}
-                height={40}
-                className="h-10 w-10"
+                width={56}
+                height={56}
+                className="h-14 w-14" // Increased header logo size from h-10 w-10 to h-14 w-14
               />
             </div>
 
@@ -176,9 +176,9 @@ export default function HomePage() {
                   <Image
                     src="/images/getmysport-logo-icon.png"
                     alt="Get My Sport"
-                    width={40}
-                    height={40}
-                    className="h-12 w-12 brightness-0 invert"
+                    width={56}
+                    height={56}
+                    className="h-16 w-16 brightness-0 invert" // Increased hero section logo size from h-12 w-12 to h-16 w-16
                   />
                   <p className="text-primary font-heading font-semibold text-lg">Your Game, Your Way.</p>
                 </div>
@@ -608,9 +608,9 @@ export default function HomePage() {
               <Image
                 src="/images/getmysport-logo-icon.png"
                 alt="Get My Sport"
-                width={40}
-                height={40}
-                className="h-10 w-10 brightness-0 invert"
+                width={56}
+                height={56}
+                className="h-14 w-14 brightness-0 invert" // Increased footer logo size from h-10 w-10 to h-14 w-14
               />
               <p className="text-background/80 text-lg">Your Game, Your Way.</p>
             </div>
