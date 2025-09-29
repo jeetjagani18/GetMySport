@@ -10,7 +10,6 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card"
-import { WaitlistModal } from "@/components/waitlist-modal"
 import { SportsGrid } from "@/components/sports-grid"
 import { FAQSection } from "@/components/faq-section"
 import { useToast } from "@/hooks/use-toast"
@@ -119,11 +118,6 @@ export default function HomePage() {
                   {item.label}
                 </Link>
               ))}
-              <WaitlistModal>
-                <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Join
-                </Button>
-              </WaitlistModal>
             </div>
 
             {/* Mobile menu button */}
@@ -157,11 +151,6 @@ export default function HomePage() {
                     {item.label}
                   </Link>
                 ))}
-                <WaitlistModal>
-                  <Button size="sm" className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Join
-                  </Button>
-                </WaitlistModal>
               </div>
             </div>
           )}
@@ -192,11 +181,6 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <WaitlistModal>
-                  <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Join the Waitlist
-                  </Button>
-                </WaitlistModal>
                 <Button
                   variant="outline"
                   size="lg"
@@ -300,11 +284,9 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <WaitlistModal>
-              <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90">
-                Get Early Access
-              </Button>
-            </WaitlistModal>
+            <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90">
+              Get Early Access
+            </Button>
           </div>
         </div>
       </section>
@@ -439,10 +421,6 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
-
-                <WaitlistModal defaultRole="player">
-                  <Button className="w-full text-lg py-6 bg-primary hover:bg-primary/90">I'm a Player</Button>
-                </WaitlistModal>
               </CardContent>
             </Card>
 
@@ -468,12 +446,6 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
-
-                <WaitlistModal defaultRole="owner">
-                  <Button className="w-full text-lg py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                    I'm a Ground Owner
-                  </Button>
-                </WaitlistModal>
               </CardContent>
             </Card>
           </div>

@@ -4,8 +4,6 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { WaitlistModal } from "@/components/waitlist-modal"
 import { Menu, X, Mail, Instagram, Twitter, Linkedin } from "lucide-react"
 
 interface SharedLayoutProps {
@@ -67,11 +65,6 @@ export function SharedLayout({ children }: SharedLayoutProps) {
               <Link href="/refund" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
                 Refund Policy
               </Link>
-              <WaitlistModal>
-                <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Join
-                </Button>
-              </WaitlistModal>
             </div>
 
             {/* Mobile menu button */}
@@ -119,11 +112,6 @@ export function SharedLayout({ children }: SharedLayoutProps) {
                 >
                   Refund Policy
                 </Link>
-                <WaitlistModal>
-                  <Button size="sm" className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Join
-                  </Button>
-                </WaitlistModal>
               </div>
             </div>
           )}
