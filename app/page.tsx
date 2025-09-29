@@ -95,11 +95,11 @@ export default function HomePage() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Image
-                src="/images/getmysport-logo.png"
+                src="/images/getmysport-logo-icon.png"
                 alt="Get My Sport"
-                width={140}
-                height={45}
-                className="h-10 w-auto"
+                width={40}
+                height={40}
+                className="h-10 w-10"
               />
             </div>
 
@@ -174,10 +174,10 @@ export default function HomePage() {
               <div className="space-y-6">
                 <div className="flex items-center space-x-2">
                   <Image
-                    src="/images/getmysport-logo.png"
+                    src="/images/getmysport-logo-icon.png"
                     alt="Get My Sport"
-                    width={60}
-                    height={60}
+                    width={40}
+                    height={40}
                     className="h-12 w-12 brightness-0 invert"
                   />
                   <p className="text-primary font-heading font-semibold text-lg">Your Game, Your Way.</p>
@@ -216,7 +216,7 @@ export default function HomePage() {
             <div className="relative flex justify-center">
               <div className="relative">
                 <Image
-                  src="/images/getmysport-logo.png"
+                  src="/images/getmysport-logo-icon.png"
                   alt="Get My Sport Logo"
                   width={400}
                   height={400}
@@ -606,11 +606,11 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-12">
             <div className="space-y-6">
               <Image
-                src="/images/getmysport-logo.png"
+                src="/images/getmysport-logo-icon.png"
                 alt="Get My Sport"
-                width={140}
-                height={45}
-                className="h-10 w-auto brightness-0 invert"
+                width={40}
+                height={40}
+                className="h-10 w-10 brightness-0 invert"
               />
               <p className="text-background/80 text-lg">Your Game, Your Way.</p>
             </div>

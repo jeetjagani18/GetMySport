@@ -38,11 +38,11 @@ export function SharedLayout({ children }: SharedLayoutProps) {
             <div className="flex items-center">
               <Link href="/">
                 <Image
-                  src="/images/getmysport-logo.png"
+                  src="/images/getmysport-logo-icon.png"
                   alt="Get My Sport"
-                  width={140}
-                  height={45}
-                  className="h-10 w-auto"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10"
                 />
               </Link>
             </div>
