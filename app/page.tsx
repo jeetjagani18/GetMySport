@@ -105,26 +105,20 @@ export default function HomePage() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {[
-                { label: "Home", id: "home" },
-                { label: "Sports", id: "sports" },
-                { label: "What You Can Do", id: "what-you-can-do" },
-                { label: "How It Works", id: "how-it-works" },
-                { label: "Features", id: "features" },
-                { label: "Players & Owners", id: "players-owners" },
-                { label: "Cities", id: "cities" },
-                { label: "FAQ", id: "faq" },
+                { label: "Home", href: "/" },
+                { label: "About", href: "/about" },
+                { label: "Privacy", href: "/privacy" },
+                { label: "Terms", href: "/terms" },
+                { label: "Refund Policy", href: "/refund" },
               ].map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                <Link
+                  key={item.label}
+                  href={item.href}
                   className="text-sm font-medium text-foreground hover:text-primary transition-colors"
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
-              <Link href="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                About
-              </Link>
               <WaitlistModal>
                 <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Join
@@ -148,29 +142,21 @@ export default function HomePage() {
             <div className="md:hidden py-4 border-t border-border">
               <div className="flex flex-col space-y-4">
                 {[
-                  { label: "Home", id: "home" },
-                  { label: "Sports", id: "sports" },
-                  { label: "What You Can Do", id: "what-you-can-do" },
-                  { label: "How It Works", id: "how-it-works" },
-                  { label: "Features", id: "features" },
-                  { label: "Players & Owners", id: "players-owners" },
-                  { label: "Cities", id: "cities" },
-                  { label: "FAQ", id: "faq" },
+                  { label: "Home", href: "/" },
+                  { label: "About", href: "/about" },
+                  { label: "Privacy", href: "/privacy" },
+                  { label: "Terms", href: "/terms" },
+                  { label: "Refund Policy", href: "/refund" },
                 ].map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                  <Link
+                    key={item.label}
+                    href={item.href}
                     className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 ))}
-                <Link
-                  href="/about"
-                  className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors"
-                >
-                  About
-                </Link>
                 <WaitlistModal>
                   <Button size="sm" className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground">
                     Join
